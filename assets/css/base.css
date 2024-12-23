@@ -1,0 +1,101 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --boder--color:#dbdbdb;
+    --cam--color:#f35d4f;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; /*1rem=10px*/
+    line-height: 1.6rem;
+    font-family:sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://cdn2.cellphones.com.vn/x/media/wysiwyg/BGNoel-1920x1080.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width {
+    width: 100%;
+}
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    transform: scale(0);
+    /* display: none; */
+    
+    /* transform: translateX(-50%); */
+}
+
+.modal .auth-form__heading{
+    transform: translateX(1);
+    
+}
+
+.modal#active{
+    transform: scale(1);
+}
+#logout#off {
+    display: none;
+}
+#login#off {
+    display: none;
+}
+.auth-form#off {
+    display: none;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.modal__body{
+    margin: auto;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.btn{
+    min-width: 142px;
+    min-height: 36px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.btn.btn--primary{
+    background-color: var(--cam--color);
+    color: var(--white-color);
+    
+}
